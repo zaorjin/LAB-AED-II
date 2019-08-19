@@ -13,13 +13,15 @@ int main(){
             retornaStatusSemaforo(x,&status);
         }
     }
-    if(status == 0)printf("verde");
-    if(status == 1)printf("amarelo");
-    if(status == 2)printf("vermelho");
+    printf("\n%x", &status);
+    printf("\n%d", status);
+    if(status == 0)printf("\nverde");
+    if(status == 1)printf("\namarelo");
+    if(status == 2)printf("\nvermelho");
     return (0);
 }
 
 void retornaStatusSemaforo(int semaforo, int *status){
     srand(time(NULL));
-    *status =rand()% 3;
+    *status = rand()% 3;
 }
